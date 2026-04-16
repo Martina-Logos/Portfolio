@@ -39,7 +39,7 @@ export default function About() {
           loading="lazy"
         />
         <div className={styles.overlay}>
-          <span className={styles.overlayHandle}>Logos Intelligence</span>
+          <span className={styles.overlayHandle}>Junior Software & AI Engineer</span>
           <div className={styles.overlayName}>Martina Namutebi </div>
         </div>
       </div>

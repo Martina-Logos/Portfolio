@@ -7,7 +7,7 @@ export default function Hero() {
         <span className={styles.tag}>available for opportunities</span>
         <h1 className={styles.name}>Martina <em>Namutebi</em><br />Here</h1>
         <p className={styles.desc}>
-          Junior Software &amp; AI Engineer, building thoughtful tools at the intersection of code and intelligence.
+          Junior Software &amp; AI Engineer, who is interested in applying technology to solve real world problems and improving systems through intelligent solutions.
         </p>
         <div className={styles.cta}>
           <a href="#projects" className={styles.btnPrimary}>view projects</a>
