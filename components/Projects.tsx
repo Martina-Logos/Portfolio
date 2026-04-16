@@ -3,24 +3,24 @@ import styles from './Projects.module.css'
 const projects = [
   {
     num: '01',
-    title: 'Project Alpha',
-    desc: 'A brief description of what this project does, the problem it solves, and what makes it interesting. Keep it to 2–3 sentences.',
-    tags: ['Python', 'FastAPI', 'React'],
-    link: 'https://github.com/yourusername',
+    title: 'HealthBot',
+    desc: 'A smart healthcare assistant that helps users understand symptoms, get basic health insights, and make informed wellness decisions.',
+    tags: ['Python', 'RAG', 'Streamlit', 'OpenAI API'],
+    link: 'https://github.com/TuringCollegeSubmissions/nmarti-AE.2.5',
   },
   {
     num: '02',
-    title: 'Project Beta',
-    desc: 'Another project description. Highlight the tech used, your role, and any interesting outcomes or learnings from building it.',
-    tags: ['PyTorch', 'LangChain', 'Streamlit'],
-    link: 'https://github.com/yourusername',
+    title: 'Interview Coach',
+    desc: 'A virtual interview assistant that helps users practice interviews by generating questions and guiding their responses.',
+    tags: ['Python', 'Prompt Engineering', 'Streamlit', 'OpenAI API'],
+    link: 'https://github.com/TuringCollegeSubmissions/nmarti-AE.1.4',
   },
   {
     num: '03',
-    title: 'Project Gamma',
-    desc: 'Third project — perhaps an open source contribution, hackathon build, or academic project. What did you learn building it?',
-    tags: ['TypeScript', 'Next.js', 'OpenAI'],
-    link: 'https://github.com/yourusername',
+    title: 'Inventory Management System',
+    desc: 'This was an academic project system that helps track products, manage stock levels, and keep inventory organized.',
+    tags: ['JavaScript', 'Node.js', 'MongoDB', 'Pug Templates'],
+    link: 'https://github.com/Martina-Logos/MWF-Ltd',
   },
 ]
 

@@ -18,6 +18,14 @@
   font-weight: 600;
   color: var(--deep-purple);
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 .links {
   display: flex;

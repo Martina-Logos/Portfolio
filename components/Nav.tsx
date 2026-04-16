@@ -15,7 +15,10 @@ export default function Nav() {
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <a href="#hero" className={styles.logo}>Logos Intelligence</a>
+      <a href="#hero" className={styles.logo}>
+        <img src="/label.png" alt="Logo" className={styles.logoIcon} />
+        <span>Logos Intelligence</span>
+      </a>
       <ul className={styles.links}>
         {links.map(l => (
           <li key={l}><a href={`#${l}`} className={styles.link}>{l}</a></li>
