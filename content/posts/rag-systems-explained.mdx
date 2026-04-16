@@ -1,0 +1,30 @@
+---
+title: "RAG Explained: Why Retrieval-Augmented Generation Works"
+excerpt: "RAG is becoming the default architecture for AI apps that need accurate, up-to-date answers. Here is how it works and when to use it."
+date: "2025-01-15"
+readTime: "6 min read"
+category: "AI"
+---
+
+## The problem RAG solves
+
+LLMs have a knowledge cutoff and no access to your private data. RAG bridges that gap by retrieving relevant documents at query time and feeding them as context.
+
+## The basic pipeline
+
+1. **Chunk** your documents into meaningful pieces
+2. **Embed** each chunk into a vector
+3. **Store** vectors in a vector database (Pinecone, Chroma, pgvector)
+4. At query time: **embed the question**, find similar chunks, **inject into the prompt**
+
+```python
+from langchain_community.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings
+
+vectorstore = Chroma.from_documents(docs, OpenAIEmbeddings())
+retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
+```
+
+## When to use RAG vs fine-tuning
+
+Use RAG when your data changes frequently or you need source attribution. Fine-tune when you need the model to adopt a specific style or behaviour consistently.

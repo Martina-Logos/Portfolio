@@ -1,0 +1,71 @@
+.projects { background: var(--almond); padding: 7rem 4rem; }
+.header { margin-bottom: 4rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.card {
+  background: var(--cream);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.25s;
+  display: block;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.card:hover { background: var(--deep-purple); }
+.card:hover .num,
+.card:hover .cardTitle,
+.card:hover .cardDesc { color: var(--cream); }
+.card:hover::before { transform: scaleX(1); }
+.card:hover .tag { background: rgba(245,241,230,0.15); color: var(--almond); }
+.num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--almond);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  transition: color 0.25s;
+}
+.cardTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-purple);
+  margin-bottom: 0.8rem;
+  transition: color 0.25s;
+}
+.cardDesc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+  transition: color 0.25s;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  background: var(--almond);
+  color: var(--deep-purple);
+  letter-spacing: 0.06em;
+  transition: background 0.25s, color 0.25s;
+}
+@media (max-width: 900px) {
+  .projects { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

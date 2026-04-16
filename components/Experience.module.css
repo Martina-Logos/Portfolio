@@ -1,0 +1,91 @@
+.experience { background: var(--deep-purple); padding: 7rem 4rem; }
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.label::before { content: '//'; color: var(--sage); font-size: 0.8rem; }
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.timeline {
+  margin-top: 4rem;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: rgba(245,241,230,0.15);
+}
+.item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(245,241,230,0.08);
+  position: relative;
+}
+.item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 2.8rem;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--sage);
+  letter-spacing: 0.06em;
+  padding-top: 0.2rem;
+  padding-left: 1.5rem;
+}
+.role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+.org {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+}
+.desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(245,241,230,0.55);
+  margin-bottom: 1rem;
+}
+.tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border: 1px solid rgba(245,241,230,0.2);
+  color: rgba(245,241,230,0.5);
+  letter-spacing: 0.06em;
+}
+@media (max-width: 900px) {
+  .experience { padding: 5rem 1.5rem; }
+  .item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .date { padding-left: 1.5rem; }
+}

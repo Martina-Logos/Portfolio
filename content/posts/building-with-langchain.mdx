@@ -1,0 +1,33 @@
+---
+title: "Building AI Agents with LangChain: What I Learned"
+excerpt: "A practical walkthrough of building your first LangChain agent — the patterns that work, the pitfalls to avoid, and how to think about tool use."
+date: "2025-03-01"
+readTime: "8 min read"
+category: "AI"
+---
+
+## Why LangChain?
+
+When I started exploring AI agents, LangChain felt overwhelming. But once it clicked, it became my go-to for wiring together LLMs with real-world tools.
+
+## The core pattern
+
+Every agent loop is essentially: **think → act → observe → repeat**. LangChain formalises this with the ReAct pattern.
+
+```python
+from langchain.agents import create_react_agent
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(model="gpt-4o-mini")
+agent = create_react_agent(llm, tools, prompt)
+```
+
+## What actually matters
+
+- **Tool descriptions are everything.** The model decides which tool to use based on your description. Write it as if explaining to a smart intern.
+- **Limit your tool count.** More than 5–6 tools and the agent starts making odd choices.
+- **Add structured output.** Use Pydantic models to constrain what the LLM returns.
+
+## Wrapping up
+
+Start simple — one tool, one task. Complexity compounds fast in agent systems.

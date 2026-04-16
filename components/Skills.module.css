@@ -1,0 +1,31 @@
+.skills {
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+  padding: 7rem 4rem;
+}
+.intro { padding-top: 0.5rem; }
+.sub { font-size: 0.9rem; line-height: 1.75; color: var(--charcoal); opacity: 0.6; margin-top: 1.2rem; }
+.groups { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 4rem; }
+.groupTitle {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--almond);
+}
+.skillItem { margin-bottom: 1.1rem; }
+.skillTop { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
+.skillName { font-size: 0.85rem; color: var(--charcoal); }
+.skillPct { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--gold); }
+.bar { height: 2px; background: var(--almond); position: relative; overflow: hidden; }
+.fill { position: absolute; top: 0; left: 0; bottom: 0; background: var(--deep-purple); transition: width 1.2s ease; }
+@media (max-width: 900px) {
+  .skills { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+  .groups { grid-template-columns: 1fr; }
+}

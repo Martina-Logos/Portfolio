@@ -1,0 +1,103 @@
+.blog { background: var(--cream-dark); padding: 7rem 4rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 4rem;
+}
+
+.card {
+  background: var(--cream);
+  padding: 2.5rem 2.2rem;
+  display: block;
+  transition: background 0.25s;
+  position: relative;
+}
+
+.featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.featuredRight {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 0.2rem;
+}
+
+.card:hover { background: var(--deep-purple); }
+.card:hover .cardTitle { color: var(--cream); }
+.card:hover .excerpt { color: rgba(245,241,230,0.65); opacity: 1; }
+.card:hover .meta { color: rgba(245,241,230,0.4); opacity: 1; }
+.card:hover .cat { background: rgba(245,241,230,0.1); color: var(--almond); }
+.card:hover .readMore { color: var(--gold); }
+
+.cat {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  background: var(--almond);
+  color: var(--deep-purple);
+  padding: 3px 10px;
+  margin-bottom: 1rem;
+  transition: background 0.25s, color 0.25s;
+}
+
+.cardTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--deep-purple);
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  transition: color 0.25s;
+}
+
+.featured .cardTitle { font-size: 2rem; }
+
+.excerpt {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+  opacity: 0.65;
+  margin-bottom: 1.2rem;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--charcoal);
+  opacity: 0.45;
+  letter-spacing: 0.06em;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+.readMore {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  opacity: 0.4;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+@media (max-width: 900px) {
+  .blog { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+  .featured { grid-column: span 1; grid-template-columns: 1fr; }
+  .featuredRight { justify-content: flex-start; margin-top: -0.5rem; }
+}

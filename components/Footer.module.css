@@ -1,0 +1,18 @@
+.footer {
+  background: #1e0620;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(194,161,77,0.2);
+}
+.copy,
+.made {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(245,241,230,0.25);
+  letter-spacing: 0.06em;
+}
+@media (max-width: 900px) {
+  .footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+}
