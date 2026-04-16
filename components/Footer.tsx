@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <span className={styles.copy}>© {new Date().getFullYear()} Your Name. All rights reserved.</span>
-      <span className={styles.made}>built with intention</span>
+      <span className={styles.made}>Visionary</span>
     </footer>
   )
 }
